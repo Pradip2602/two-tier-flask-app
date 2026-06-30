@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   mysql:
     image: mysql:5.7
@@ -22,7 +20,7 @@ services:
       start_period: 60s
 
   flask-app:
-    image: pradip2602/two-tier-flask-app/two-tier-flask-app:latest
+    image: pradip2602/two-tier-flask-app:latest
     container_name: flask-app
     ports:
       - "5000:5000"
