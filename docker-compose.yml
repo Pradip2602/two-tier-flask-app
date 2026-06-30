@@ -12,7 +12,9 @@ services:
       MYSQL_PASSWORD: admin
     volumes:
       - ./mysql-data:/var/lib/mysql
-      - ./message.sql:/docker-entrypoint-initdb.d/message.sql  
+      - ./message.sql:/docker-entrypoint-initdb.d/message.sql 
+    RUN:
+      - sudo chown -R $USER ./mysql-data/
     networks:
       - twotier
     healthcheck:
